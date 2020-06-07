@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        archVersion = "2.2.0"
+        clVersion = "2.0.0-beta6"
+        coroutinesVersion = '1.3.2'
+        fastAdapterVersion = "5.0.0"
+        koinVersion = "2.0.1"
+        kotlinVersion = '1.3.72'
+        materialThemeVersion = '1.1.0'
+        navVersion = "2.2.2"
+        roomVersion = "2.2.5"
+        timberVersion = "4.7.1"
+    }
+
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.android.gms:oss-licenses-plugin:0.10.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

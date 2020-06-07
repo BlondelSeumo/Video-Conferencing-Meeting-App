@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/splashBgColor" />
+
+    <item
+        android:drawable="@drawable/ic_splash_logo"
+        android:gravity="center" />
+
+</layer-list>

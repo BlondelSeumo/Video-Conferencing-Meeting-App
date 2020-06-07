@@ -1,0 +1,67 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Meetly</string>
+    <string name="app_server_url">https://meet.jit.si</string>
+    <string name="app_tagline">Instant video conferences with your family, friends, and colleagues</string>
+    <string name="app_feedback_contact_email">contact@aculix.com</string>
+    <string name="app_privacy_policy_url">https://aculix.com/privacy-policy/</string>
+    <string name="app_terms_of_service_url">https://aculix.com/terms-of-service/</string>
+
+    <!-- AdMob -->
+    <string name="admob_app_id">ca-app-pub-1829465788424835~4729080012</string>
+    <string name="banner_ad_id_meeting_history">ca-app-pub-1829465788424835/7513712377</string>
+    <string name="interstitial_ad_id_create_meeting">ca-app-pub-1829465788424835/6009059014</string>
+    <string name="interstitial_ad_id_join_meeting">ca-app-pub-1829465788424835/8739643067</string>
+
+    <string name="app_intro_meeting_title">Start a Meeting</string>
+    <string name="app_intro_meeting_desc">Start or join a video meeting on the go</string>
+    <string name="app_intro_chat_title">Message Your Team</string>
+    <string name="app_intro_chat_desc">Send text messages to your team during the meeting</string>
+    <string name="app_intro_meeting_history_title">Meeting History</string>
+    <string name="app_intro_meeting_history_desc">See the list of your previous meetings and rejoin them anytime.</string>
+
+    <string name="authentication_sign_in_email">Sign in with Email</string>
+    <string name="authentication_sign_in_google">Sign in with Google</string>
+    <string name="authentication_login_canceled">Sign in canceled</string>
+
+    <string name="main_join_meeting">Join Meeting</string>
+    <string name="main_create_meeting">Create Meeting</string>
+    <string name="main_meeting_code">Meeting Code</string>
+    <string name="main_btn_create_meeting">Create</string>
+    <string name="main_enter_meeting_code">Enter Meeting Code</string>
+    <string name="main_btn_join_meeting">JOIN</string>
+    <string name="main_error_meeting_code_length">Minimum length of meeting code allowed is %1$d</string>
+    <string name="main_share_meeting_code_title">Share meeting code via</string>
+    <string name="main_meeting_code_copied">Meeting Code copied from Clipboard</string>
+    <string name="main_empty_clipboard">No Meeting Code found in the Clipboard</string>
+
+    <string name="meeting_history_rejoin">REJOIN</string>
+    <string name="meeting_history_last_joined_time">Last joined %1$s</string>
+    <string name="meeting_history_toolbar_title">Meeting History</string>
+    <string name="meeting_history_delete_meetings">Delete Meetings</string>
+    <string name="meeting_history_empty">You haven\'t joined any meetings yet. Create or Join any meeting from the home screen.</string>
+    <string name="meeting_history_meeting_code_copied">Meeting Code copied to Clipboard</string>
+
+    <string name="profile_sign_out">Sign Out</string>
+    <string name="profile_user_not_authenticated">User not signed in</string>
+    <string name="profile_dark_mode">Dark Mode</string>
+    <string name="profile_send_feedback">Send us a feedback</string>
+    <string name="profile_rate_app">Rate app on Google Play</string>
+    <string name="profile_share_app">Share app</string>
+    <string name="profile_dot_separator">\u2022</string>
+    <string name="profile_feedback_email_subject">Feedback - Meetly</string>
+    <string name="profile_share_app_title">Share app via</string>
+    <string name="profile_share_app_text">Download Meetly, do instant video conferences with your family, friends, and colleagues. \n\nhttps://play.google.com/store/apps/details?id=%1$s</string>
+
+    <string name="all_skip">Skip</string>
+    <string name="all_error_internet_connectivity">Please check your internet connectivity and try  again</string>
+    <string name="all_error_unknown">Unknown error occurred. Please try again</string>
+    <string name="all_btn_sign_out">SIGN OUT</string>
+    <string name="all_btn_sign_in">SIGN IN</string>
+    <string name="all_privacy_policy">Privacy Policy</string>
+    <string name="all_terms_of_service">Terms of Service</string>
+    <string name="all_creating_meeting">Please wait, creating meeting</string>
+    <string name="all_joining_meeting">Please wait, joining meeting</string>
+    <string name="all_rejoining_meeting">Please wait, rejoining meeting</string>
+    <string name="profile_open_source_licenses">Open Source Licenses</string>
+</resources>

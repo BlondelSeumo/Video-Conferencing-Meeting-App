@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserProfileDialog"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUserAuthenticationStatus"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_sign_out"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserProfileDialog"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="@+id/ivUserProfileDialog" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/btnUserAuthenticationStatus"
+        app:layout_constraintStart_toEndOf="@+id/ivUserProfileDialog"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Jon Snow" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserName"
+        app:layout_constraintStart_toStartOf="@+id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        tools:text="jonsnow@gmail.com" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserNotAuthenticated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/profile_user_not_authenticated"
+        android:textColor="?android:attr/textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUserProfileDialog"
+        app:layout_constraintEnd_toStartOf="@+id/btnUserAuthenticationStatus"
+        app:layout_constraintStart_toEndOf="@+id/ivUserProfileDialog"
+        app:layout_constraintTop_toTopOf="@+id/ivUserProfileDialog" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierUserDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="ivUserProfileDialog, tvEmail, tvUserNotAuthenticated, btnUserAuthenticationStatus" />
+
+    <View
+        android:id="@+id/dividerUserDetails"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrierUserDetails" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchDarkMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="false"
+        android:text="@string/profile_dark_mode"
+        android:textSize="@dimen/text_size_s"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/dividerUserDetails" />
+
+    <View
+        android:id="@+id/dividerDarkMode"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchDarkMode" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSendFeedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="16dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="@string/profile_send_feedback"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/text_size_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerDarkMode" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRateApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_google_play"
+        android:drawablePadding="16dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="@string/profile_rate_app"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/text_size_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSendFeedback" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvShareApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_share"
+        android:drawablePadding="16dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="@string/profile_share_app"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/text_size_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRateApp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvOpenSourceLicenses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_open_source_licenses"
+        android:drawablePadding="16dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="@string/profile_open_source_licenses"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/text_size_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShareApp" />
+
+    <View
+        android:id="@+id/dividerOpenSourceLicenses"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOpenSourceLicenses" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPrivacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="@string/all_privacy_policy"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvDotSeparator"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerOpenSourceLicenses"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDotSeparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_dot_separator"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPrivacyPolicy"
+        app:layout_constraintEnd_toStartOf="@+id/tvTermsOfService"
+        app:layout_constraintStart_toEndOf="@+id/tvPrivacyPolicy"
+        app:layout_constraintTop_toTopOf="@+id/tvPrivacyPolicy" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTermsOfService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="@string/all_terms_of_service"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPrivacyPolicy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDotSeparator"
+        app:layout_constraintTop_toTopOf="@+id/tvPrivacyPolicy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
